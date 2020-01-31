@@ -20,9 +20,16 @@ print(selection_sort([436, 89, 3042, 8143, 4, 1, 76, 632, 233, 9]))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    switch_places = True
 
+    while switch_places:
+        switch_places = False
+        for i in range(0, len(arr) - 1):
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+            switch_places = True 
     return arr
-
+print(bubble_sort([596, 819, 782, 5143, 8, 5, 176, 632, 333, 7]))
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
